@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    $if(noindex)$
+      <meta name="robots" content="noindex, noai, noimageai">
+    $else$
+      <meta name="robots" content="noai, noimageai">
+    $endif$
+
+    $if(title)$
+      <title>$title$ · Mechap</title>
+    $else$
+      <title>Mechap</title>
+    $endif$
+
+    <link rel="shortcut icon" href="/favicon.png">
+    <!-- https://purecss.io/ -->
+    <link rel="stylesheet" type="text/css" href="/css/pure-min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/skin.css" />
+    <!-- Default appearance -->
+    <link rel="stylesheet" type="text/css" href="/css/colours.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/default.css" />
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="/css/katex.css" />
+    <!-- Margin and sidenotes -->
+    <link rel="stylesheet" type="text/css" href="/css/sidenotes.css" />
+  </head>
+
+  <body class="pure-skin-solid">
+    <div class="pure-g-r">
+      <div class="pure-u-1-4">
+        <div id="navigation" class="no-print">
+          <div class="pure-menu pure-menu-open">
+            <a href="/index.html" class="pure-menu-heading menu-title">
+              Logicverse<br>
+              <span class="menu-subtitle">Mechap</span>
+            </a>
+            <ul>
+              <li><a href="/posts.html">Posts</a></li>
+              <!-- <li><a href="/research.html">Research</a></li> -->
+              <!-- <li><a href="/free-software.html">Free Software</a></li> -->
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- A table of contents on the left side, but only for screens
+             that are big enough -->
+        $if(no-toc)$
+        $else$ $if(toc)$
+          <div id="contents-big">
+            <p class="mini-header">Contents <a id="up-arrow" href="#">↑</a></p>
+            $toc$
+          </div>
+        $endif$ $endif$
+      </div>
+      <div class="pure-u-3-4">
+        <div id="content">
+          $if(title)$
+            <h1>$title$</h1>
+          $endif$
+
+          $body$
+
+        </div>
+        <div id="footer">
+          <a>Website source</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

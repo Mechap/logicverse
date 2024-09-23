@@ -1,0 +1,31 @@
+<article>
+    <p class="header">
+      $if(date)$
+        Posted on $date$
+      $endif$
+      $if(last-modified)$
+        &thinsp;·&thinsp; last modified: $last-modified$
+      $endif$
+      $if(date)$
+        &thinsp;·&thinsp; $estimated-reading-time$ &thinsp;·&nbsp;
+      $endif$
+      $if(tags)$
+        $tags$
+      $endif$
+    </p>
+    <section>
+      <!-- A table of contents inline in the text, in case the screen is
+           too small for the one in the `default.html' template -->
+      $partial("templates/toc.html")$
+      <!-- Body is included in the above file -->
+    </section>
+    $if(no-comment)$$else$
+      <!-- A footer-ish thing above the actual boring footer for pretty
+           fleurons and things that should only appear on posts. -->
+      <div style="text-align:center;">
+        <img class="center-block-dark" src="/images/fleuron-dark.svg" style="max-width: 3cm" alt="End of post fleuron">
+        <img class="center-block-light" src="/images/fleuron.svg" style="max-width: 3cm" alt="End of post fleuron">
+        Have a comment? Write me an <a href="/about.html">email!</a>
+      </div>
+    $endif$
+</article>

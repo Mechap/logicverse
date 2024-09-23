@@ -1,0 +1,11 @@
+docs
+.git
+.stack-work
+_cache
+bib
+posters
+free-software.md
+impressum.md
+mackey-functors.md
+research.md
+stack.yaml.lock

@@ -1,0 +1,21 @@
+<h1 style="font-variant: normal">Hi!</h1>
+<p>
+  Welcome to this small corner of the internet that I've claimed for
+  myself—enjoy your stay.
+</p>
+
+<h2>Posts</h2>
+$for(posts)$
+  <div class="posts">
+    <div style="text-align: left">
+      <b style="font-size: 1.1em; font-family: var(--serif-fonts);">$title$</b>
+      <span style="font-size: 19px">$if(tags)$ ($tags$) $endif$</span>
+    </div>
+    <p>
+      $teaser$
+    </p>
+    <p>
+      <a href=$url$>Read more</a> – $date$
+    </p>
+  </div>
+$endfor$
